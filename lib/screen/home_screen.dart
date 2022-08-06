@@ -14,19 +14,42 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: AppBar(
         title: const Text("HomeScreen"),
       ),
-      drawer: Drawer(),
+      drawer: const Drawer(),
       body: Container(
-        color: Colors.blue[400],
-        margin: EdgeInsets.all(10),
-        child: Center(
-          child: Column(
+        child: Container(
+          decoration: BoxDecoration(
+            border: Border(
+              bottom:BorderSide(
+                color: Colors.black12,
+              ),
+            ),
+          ),
+          height: 50,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text("Hello World"),
-              ElevatedButton(
-                onPressed: () => {},
-                child: Text("Press me"),
-              )
-              
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.home), 
+                  Text("Home")
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.newspaper), 
+                  Text("ข่าวสาร")
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(Icons.info), 
+                  Text("เกียบกับ")
+                ],
+              ),
             ],
           ),
         ),
