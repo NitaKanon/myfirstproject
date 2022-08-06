@@ -15,14 +15,36 @@ class _HomeScreenState extends State<HomeScreen> {
         title: const Text("HomeScreen"),
       ),
       drawer: Drawer(),
-      body: const Center(
-        child: Text("Hello from HomeScreen"),
+      body: Container(
+        color: Colors.blue[400],
+        margin: EdgeInsets.all(10),
+        child: Center(
+          child: Column(
+            children: [
+              Text("Hello World"),
+              ElevatedButton(
+                onPressed: () => {},
+                child: Text("Press me"),
+              )
+              
+            ],
+          ),
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(items: [
-        BottomNavigationBarItem(icon: Icon(Icons.home), label: "หน้าหลัก"),
-        BottomNavigationBarItem(icon: Icon(Icons.article), label: "ข่าวสาร"),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.home),
+          label: "หน้าหลัก",
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.article),
+          label: "ข่าวสาร",
+        ),
         //BottomNavigationBarItem(icon: Icon(Icons.home), label: "บทความ"),
-        BottomNavigationBarItem(icon: Icon(Icons.info), label: "เกี่ยวกับ"),
+        BottomNavigationBarItem(
+          icon: Icon(Icons.info),
+          label: "เกี่ยวกับ",
+        ),
       ]),
     );
   }
